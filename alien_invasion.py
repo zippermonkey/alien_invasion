@@ -1,9 +1,8 @@
-import sys
-
 import pygame
 
 from setting import Settings
 from ship import Ship
+import game_functions as gf
 
 def run_game():
     # 初始化游戏并创建一个屏幕对象
@@ -20,9 +19,7 @@ def run_game():
     while True:
 
         # 监视键盘和鼠标事件
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
+        gf.check_events()
 
         # 每次循环都重绘屏幕
         screen.fill(ai_settings.bg_color)
