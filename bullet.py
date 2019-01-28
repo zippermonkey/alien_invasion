@@ -11,8 +11,7 @@ class Bullet(Sprite):
         self.screen = screen
 
         # 创建一个表示子弹的矩形
-        self.rect = pygame.Rect(0, 0, ai_settings.bullet_width,
-                                ai_settings.bullet_height)
+        self.rect = pygame.Rect(0, 0, ai_settings.bullet_width, ai_settings.bullet_height)
         self.rect.centerx = ship.rect.centerx
         self.rect.top = ship.rect.top
 
@@ -20,7 +19,7 @@ class Bullet(Sprite):
         self.y = float(self.rect.y)
 
         self.color = ai_settings.bullet_color
-        self.speed_factor = ai_settings.bullet_speend_factor
+        self.speed_factor = ai_settings.bullet_speed_factor
 
     def update(self):
         """向上移动子弹"""
