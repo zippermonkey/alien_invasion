@@ -43,15 +43,17 @@ def check_events(ai_settings, screen, ship, bullets):
             check_keyup_events(event, ship)
 
 
-def update_screen(ai_settings, screen, ship, bullets):
+def update_screen(ai_settings, screen, ship, alien, bullets):
     """更新屏幕上的图像并切换到新屏幕"""
     # 每次循环都重绘屏幕
     screen.fill(ai_settings.bg_color)
-    # 加入飞船
-    ship.blitme()
     # 绘制子弹
     for bullet in bullets:
         bullet.draw_bullet()
+    # 加入飞船
+    ship.blitme()
+    # 加入外星人
+    alien.blitme()
     # 让最近绘制的屏幕可见
     pygame.display.flip()
 
