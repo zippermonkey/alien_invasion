@@ -8,8 +8,10 @@ class Settings():
         self.screen_height = 768
         # 背景颜色设置
         self.bg_color = (230, 230, 230)
-        # 速度设置
+        # 飞船速度设置
         self.ship_speed_factor = 1.5
+        # 外星人速度设置
+        self.alien_speed_factor = 1
 
         # 添加子弹设置
         self.bullet_speed_factor = 1
