@@ -12,6 +12,9 @@ class Settings():
         self.ship_speed_factor = 1.5
         # 外星人速度设置
         self.alien_speed_factor = 1
+        self.fleet_drop_speed = 10
+        # fleet_direction 为1表示右移 -1表示左移
+        self.fleet_direction = 1
 
         # 添加子弹设置
         self.bullet_speed_factor = 1

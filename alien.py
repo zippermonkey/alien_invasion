@@ -26,3 +26,14 @@ class Alien(Sprite):
     def blitme(self):
         """在指定位置绘制外星人"""
         self.screen.blit(self.image, self.rect)
+
+    def update(self):
+        """向右移动外星人"""
+        self.x += self.ai_settings.alien_speed_factor * self.ai_settings.fleet_direction
+        self.rect.x = self.x
+
+    def check_edges(self):
+        """检查外星人群是否撞到屏幕 撞到则返回True"""
+        screen_rect = self.screen.get_rect()
+        if self.rect.right >= screen_rect.right or self.rect.left <= 0:
+            return True
