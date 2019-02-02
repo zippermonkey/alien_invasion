@@ -72,6 +72,7 @@ def update_bullets(ai_settings, screen, ship, aliens, bullets):
     # 如果是 就删除子弹和外星人
     check_bullet_alien_collisions(ai_settings, screen, ship, aliens, bullets)
 
+
 def check_bullet_alien_collisions(ai_settings, screen, ship, aliens, bullets):
     """响应子弹和外星人碰撞"""
     collisions = pygame.sprite.groupcollide(bullets, aliens, True, True)
