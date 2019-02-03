@@ -170,7 +170,7 @@ def change_fleet_direction(ai_settings, aliens):
 
 def ship_hit(ai_settings, stats, screen, ship, aliens, bullets):
     """响应被外星人撞到的飞船"""
-    if stats.game_active:
+    if stats.ships_left > 0:
         # 将ship_left-1
         stats.ships_left -= 1
 
@@ -185,6 +185,8 @@ def ship_hit(ai_settings, stats, screen, ship, aliens, bullets):
         # 暂停
         sleep(0.5)
     else:
+        # 游戏结束时
+        pygame.mouse.set_visible(True)
         stats.game_active = False
 
 
