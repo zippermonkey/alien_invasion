@@ -29,6 +29,9 @@ class Settings():
         self.bullet_speed_factor = 3
         self.alien_speed_factor = 1
 
+        # 计分
+        self.alien_points = 50
+
         # fleet_direction 为1表示右移 -1表示左移
         self.fleet_direction = 1
 
