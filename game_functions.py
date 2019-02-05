@@ -116,7 +116,7 @@ def check_bullet_alien_collisions(ai_settings, screen, stats, sb, ship, aliens, 
             sb.prep_score()
 
     if len(aliens) == 0:
-        # 删除现有的子弹并新建一批外星人
+        # 删除现有的子弹并新建一批外星人 并且加快游戏速度和外星人点数
         bullets.empty()
         ai_settings.increase_speed()
         create_fleet(ai_settings, screen, ship, aliens)
