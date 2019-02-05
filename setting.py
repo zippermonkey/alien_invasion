@@ -24,7 +24,7 @@ class Settings():
         self.score_scale = 1.5
 
         self.initialize_dynamic_settings()
-    
+
     def initialize_dynamic_settings(self):
         """初始化随游戏进行变化的属性"""
         self.ship_speed_factor = 1.5
