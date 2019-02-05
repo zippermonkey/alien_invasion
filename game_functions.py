@@ -114,6 +114,7 @@ def check_bullet_alien_collisions(ai_settings, screen, stats, sb, ship, aliens, 
         for aliens in collisions.values():
             stats.score += ai_settings.alien_points * len(aliens)
             sb.prep_score()
+        check_high_score(stats, sb)
 
     if len(aliens) == 0:
         # 删除现有的子弹并新建一批外星人 并且加快游戏速度和外星人点数
@@ -224,3 +225,9 @@ def update_aliens(ai_settings, stats, screen, ship, aliens, bullets):
         ship_hit(ai_settings, stats, screen, ship, aliens, bullets)
     # 检查外星人是否到底端
     check_aliens_bottom(ai_settings, stats, screen, ship, aliens, bullets)
+
+def check_high_score(stats, sb):
+    """检查是否产生了最高分"""
+    if stats.high_score < stats.score:
+        stats.high_score = stats.score
+        sb.prep_high_score()
